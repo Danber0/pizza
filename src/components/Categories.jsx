@@ -1,11 +1,14 @@
 // rfce
 import React from 'react';
 
-function Categories({ items, onClickItem }) {
+const Categories = React.memo(function Categories({ items, onClickItem }) {
   const [activeitem, setActiveItem] = React.useState(null);
   const onSelectItem = (index) => {
     setActiveItem(index);
+    onClickItem(index);
   };
+
+  console.log('RERENDER CATEGORIES');
 
   return (
     <div className="categories">
@@ -18,14 +21,13 @@ function Categories({ items, onClickItem }) {
             <li
               className={activeitem === index ? 'active' : ''}
               onClick={() => onSelectItem(index)}
-              key={`${name}_${index}`
-              }>
+              key={`${name}_${index}`}>
               {name}
             </li>
           ))}
       </ul>
     </div>
   );
-}
+});
 
 export default Categories;
