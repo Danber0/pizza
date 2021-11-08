@@ -14,7 +14,7 @@ export const fetchPizzas = (sortBy, category) => (dispatch) => {
     .get(
       `https://61894ff9d0821900178d7904.mockapi.io/pizzas?${
         category !== null ? `category=${category}` : ''
-      }sortBy=${sortBy.type}&order=${sortBy.order}`,
+      }&sortBy=${sortBy.type}&order=${sortBy.order}`,
     )
     .then(({ data }) => {
       dispatch(setPizzas(data));
