@@ -1,12 +1,9 @@
 import React from 'react';
-import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from 'react-dom/cjs/react-dom.development';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { Categories, SortPopup, PizzaBlock, PizzaLoadingBlock } from '../components';
-
 import { setCategory, setSortBy } from '../redux/action/filters';
 import { fetchPizzas } from '../redux/action/pizzas';
-import { addPizzaToCart } from '../redux/action/cart';
 
 const categoryNames = ['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
 const sortItems = [
@@ -62,7 +59,7 @@ function Home() {
               <PizzaBlock
                 onClickAddPizza={handleAddPizzaToCart}
                 key={obj.id}
-                addedCount={cartItems[obj.id] && cartItems[obj.id].length}
+                addedCount={cartItems[obj.id] && cartItems[obj.id].items.length}
                 {...obj}
               />
             ))
