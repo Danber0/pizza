@@ -12,9 +12,9 @@ export const fetchPizzas = (sortBy, category) => (dispatch) => {
   });
   axios
     .get(
-      `/pizzas?${category !== null ? `category=${category}` : ''}&_sort=${
-        sortBy.type
-      }&_order=${sortBy.order}`,
+      `https://61894ff9d0821900178d7904.mockapi.io/pizzas?${
+        category !== null ? `category=${category}` : ''
+      }sortBy=${sortBy.type}&order=${sortBy.order}`,
     )
     .then(({ data }) => {
       dispatch(setPizzas(data));
