@@ -20,15 +20,15 @@ function Home() {
   const { category, sortBy } = useSelector(({ filters }) => filters);
 
   React.useEffect(() => {
-    dispatch(fetchPizzas(sortBy, category));
+    dispatch(fetchPizzas(sortBy, category)); // eslint-disable-next-line
   }, [category, sortBy]);
 
   const onSelectCategory = React.useCallback((index) => {
-    dispatch(setCategory(index));
+    dispatch(setCategory(index)); // eslint-disable-next-line
   }, []);
 
   const onSelectSortType = React.useCallback((type) => {
-    dispatch(setSortBy(type));
+    dispatch(setSortBy(type)); // eslint-disable-next-line
   }, []);
 
   const handleAddPizzaToCart = (obj) => {
