@@ -312,3 +312,145 @@ body {
     }
   }
 }
+@media (max-width: 1500px) {
+  .content__items {
+    justify-content: center;
+  }
+}
+@media (max-width: 1450px) {
+  .content {
+    &__top {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+@media (max-width: 970px) {
+  .cart__item-info > h3 {
+    font-size: 20px;
+  }
+  .cart__item-price {
+    max-width: 100%;
+    text-align: center;
+  }
+  .cart__item-price > b {
+    display: inline-block;
+  }
+  .cart__item-count > b {
+    padding: 0 5px;
+  }
+}
+@media (max-width: 870px) {
+  .cart__item-info > h3 {
+    font-size: 17px;
+  }
+  .cart__item-info > p{
+    font-size: 15px;
+  }
+  .cart__item-img{
+    display: none;
+    width: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .cart__item-count > b, .cart__item-price > b{
+    font-size: 17px;
+  }
+  .cart__item-count > div > svg{
+    width: 10px;
+  }
+}
+@media (max-width: 730px) {
+  .cart--empty {
+    width: 100%;
+  }
+  .cart--empty > img {
+    max-width: 100%;
+    margin: 45px auto;
+  }
+}
+@media (max-width: 665px) {
+  .header .container {
+    flex-direction: column;
+  }
+  .header__cart {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 615px) {
+  .content {
+    padding: 0;
+  }
+  .wrapper {
+    width: 90%;
+    height: 90%;
+  }
+  body {
+    padding-top: 25px;
+  }
+  .cart--empty {
+    padding-bottom: 60px;
+  }
+  .cart__bottom-buttons{
+    padding-bottom: 80px;
+  }
+  
+}
+@media (max-width: 540px) {
+  .go-back-btn{
+    display: none !important;
+  }
+  .cart__item-price{
+    display: none;
+  }
+  .cart .content__title{
+    font-size: 26px;
+  }
+  .cart__item{
+    display: flex;
+   justify-content: space-around;
+  }
+  .cart__item-count{
+    width: auto;
+  }
+}
+@media (max-width: 480px) {
+  .cart__item-info > h3{
+    font-size: 14px;
+    line-height: 100%;
+  }
+}
+@media (max-width: 430px) {
+  .cart .content__title{
+    display: none;
+    width: 0;
+  }
+  .cart__top{
+    justify-content: center !important;
+  }
+  .cart__clear span{
+    font-size: 20px;
+  }
+  .cart__bottom-details{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cart__bottom-buttons{
+    justify-content: center;
+    align-items: center;
+  }
+  .cart--empty h2{
+    font-size: 20px;
+  }
+  .cart--empty p{
+    font-size: 16px;
+  }
+  .wrapper{
+    width: 97%;
+  }
+  body{
+    padding-bottom: 0;
+  }
+}

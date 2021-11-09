@@ -3,6 +3,7 @@
 .categories {
   ul {
     display: flex;
+    flex-wrap: wrap;
 
     li {
       background-color: #f9f9f9;
@@ -26,6 +27,14 @@
         background-color: #282828;
         color: #fff;
       }
+    }
+  }
+}
+
+@media (max-width: 1278px) {
+  .categories {
+    ul > li{
+      margin-top: 30px;
     }
   }
 }
