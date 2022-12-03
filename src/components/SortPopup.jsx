@@ -15,7 +15,7 @@ const SortPopup = React.memo(function SortPopup({ items, activeSortType, onClick
     if (!path.includes(sortRef.current)) {
       setVisiblePopup(false);
     }
-  };
+  }; 
 
   const onSelectItem = (index) => {
     if (onClickSortType) {
