@@ -15,13 +15,13 @@ function Cart() {
   });
 
   const onClearCart = () => {
-    if (window.confirm('Ты точно хочешь очистить все пиццы?')) {
+    if (window.confirm('Do you really want to clear the cart?')) {
       dispatch(clearCart());
     }
   };
 
   const onRemoveCartItem = (id) => {
-    if (window.confirm('Точно удалить пиццы?')) {
+    if (window.confirm('Do you really want to remove all?')) {
       dispatch(removeCartItem(id));
     }
   };
@@ -35,7 +35,7 @@ function Cart() {
   };
 
   const onClickOrder = () => {
-    console.log('Ваш заказ', items);
+    console.log('Cart', items);
   };
 
   return (
@@ -72,7 +72,7 @@ function Cart() {
                   strokeLinejoin="round"
                 />
               </svg>
-              Корзина
+              Cart
             </h2>
             <div className="cart__clear">
               <svg
@@ -110,7 +110,7 @@ function Cart() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span onClick={onClearCart}>Очистить Корзину</span>
+              <span onClick={onClearCart}>Clear cart</span>
             </div>
           </div>
           <div className="content__items">
@@ -132,10 +132,10 @@ function Cart() {
           <div className="cart__bottom">
             <div className="cart__bottom-details">
               <span>
-                Всего пицц: <b>{totalCount}</b>
+               All pizzas: <b>{totalCount}</b>
               </span>
               <span>
-                Сумма заказа: <b>{totalPrice}</b>
+                Total: <b>{totalPrice}</b>
               </span>
             </div>
             <div className="cart__bottom-buttons">
@@ -155,10 +155,10 @@ function Cart() {
                   />
                 </svg>
 
-                <span>Вернуться назад</span>
+                <span>Back</span>
               </Link>
               <Button onClick={onClickOrder} className="pay-btn">
-                <span>Оплатить сейчас</span>
+                <span>Pay</span>
               </Button>
             </div>
           </div>

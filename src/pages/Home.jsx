@@ -5,11 +5,11 @@ import { Categories, SortPopup, PizzaBlock, PizzaLoadingBlock } from '../compone
 import { setCategory, setSortBy } from '../redux/action/filters';
 import { fetchPizzas } from '../redux/action/pizzas';
 
-const categoryNames = ['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
+const categoryNames = ['Meat', 'Veggie', 'Grill', 'Spicy', 'Closet'];
 const sortItems = [
-  { name: 'популярности', type: 'popular', order: 'desc' },
-  { name: 'цене', type: 'price', order: 'desc' },
-  { name: 'алфавиту', type: 'name', order: 'asc' },
+  { name: 'Popular', type: 'popular', order: 'desc' },
+  { name: 'Price', type: 'price', order: 'desc' },
+  { name: 'Alphabet', type: 'name', order: 'asc' },
 ];
 
 function Home() {
@@ -52,7 +52,7 @@ function Home() {
           onClickSortType={onSelectSortType}
         />
       </div>
-      <h2 className="content__title">Все пиццы</h2>
+      <h2 className="content__title">All pizzas</h2>
       <div className="content__items">
         {isLoaded
           ? items.map((obj) => (

@@ -6,7 +6,7 @@ import Button from '../Button';
 function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, addedCount }) {
   const [activeType, setActiveType] = React.useState(types[0]);
   const [activeSize, setActiveSize] = React.useState(0);
-  const avaibleTypes = ['тонкое', 'традиционное'];
+  const avaibleTypes = ['Thin', 'Traditional'];
   const avaibleSizes = [26, 30, 40];
 
   const onSelectType = (index) => {
@@ -56,13 +56,13 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
                 active: activeSize === index,
                 disabled: !sizes.includes(size),
               })}>
-              {size + ' см.'}
+              {size + ' sm.'}
             </li>
           ))}
         </ul>
       </div>
       <div className="pizza-block__bottom">
-        <div className="pizza-block__price">от {price} ₽</div>
+        <div className="pizza-block__price">from {price} $</div>
         <Button onClick={onAddPizza} className="button--add" outline>
           <svg
             width="12"
@@ -75,7 +75,7 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
               fill="white"
             />
           </svg>
-          <span>Добавить</span>
+          <span>Add</span>
           {addedCount && <i>{addedCount}</i> }
         </Button>
       </div>
